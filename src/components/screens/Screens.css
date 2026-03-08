@@ -1,0 +1,292 @@
+/* Global screens CSS used by multiple screens */
+.header-center {
+    text-align: center;
+    margin-bottom: 32px;
+    padding-top: 24px;
+}
+
+.subtitle {
+    margin-top: 8px;
+    font-size: 1.1rem;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-top: 16px;
+}
+
+.back-btn {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-main);
+    padding: 8px;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-main);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Home Screen */
+.games-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.game-card {
+    padding: 24px;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.game-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.game-card-header h2 {
+    margin: 0;
+}
+
+.game-card-footer {
+    margin-top: 24px;
+}
+
+/* Setup Screen */
+.setup-screen {
+    padding-bottom: 100px;
+}
+
+.setup-card {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.counter-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: 16px 0;
+}
+
+.counter-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.counter-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.counter-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    width: 48px;
+    text-align: center;
+}
+
+.names-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--bg-card);
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.names-list h3 {
+    margin-bottom: 8px;
+}
+
+.name-input {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    padding: 16px;
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+}
+
+.name-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+/* Bottom Action */
+.bottom-action {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    background: linear-gradient(to top, var(--bg-dark) 60%, transparent);
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+/* Player Grid Screen */
+.guide-text {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding-bottom: 100px;
+}
+
+.player-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    text-align: center;
+    min-height: 160px;
+}
+
+.player-initial {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.player-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.player-seen {
+    opacity: 0.6;
+    background: rgba(15, 23, 42, 0.5);
+    border-color: rgba(255, 255, 255, 0.02);
+}
+
+.player-seen .player-initial {
+    background: var(--gradient-success);
+    box-shadow: none;
+    opacity: 0.8;
+}
+
+/* Reveal Hold Card (Debate Screen) */
+.reveal-hold-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    /* Disable text selection for mobile long-press */
+    -webkit-touch-callout: none;
+    /* Disable callout on long press on iOS */
+    transition: all 0.2s ease;
+}
+
+.reveal-hold-card:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.reveal-hold-idle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reveal-hold-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.reveal-hold-role {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.reveal-hold-info {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
